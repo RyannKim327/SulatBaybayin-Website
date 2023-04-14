@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+RewriteRule ^(.*)$ $1.php
+
+ErrorDocument 404 "<html><script> location.href = 'index?b=404';</script></html>"
+ErrorDocument 403 "<html><script> location.href = 'index?b=403';</script></html>"

@@ -1,0 +1,147 @@
+body{
+	background-color: #ffffff;
+	color: #000000;
+	user-select: none;
+}
+div{
+	visibility: hidden;
+}
+.a{
+	visibility: visible !important;
+}
+.feed input::placeholder, .feed textarea::placeholder{
+	color: #000000;
+}
+.main, .feed input, .feed textarea, #form, #form label,#form select{
+	background-color: #ccffb3;
+	background-image: linear-gradient(to bottom right,#ccffb3 1%,#dddddd);
+	color: #000000;
+	padding: 5px;
+	margin: 3px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px #ccffb3;
+}
+.centerlayout{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.main h3, .main h5{
+	text-shadow: 1px 1px 1px #ccffb3;
+	font-variant: small-caps;
+}
+.main li{
+	list-style: lower-roman;
+	font-variant: small-caps;
+	font-family: "Times New Roman", Times, serif;
+}
+a{
+	color: #000000;
+}
+h3,.navi{
+	font-family: serif;
+}
+h5{
+	font-family: monospace;
+}
+.navi{
+	background-color: #ccffb3;
+	background-image: linear-gradient(to bottom right,#ccffb3 1%,#dddddd);
+	color: #000000;
+	padding: 2px;
+	margin: 3px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px #ccffb3;
+	font-variant: small-caps;
+	font-family: "Times New Roman", Times, serif;
+}
+#back{
+	text-decoration: none;
+}
+blockquote::first-letter{
+	color: #00f;
+}
+label{
+	color: #00f;
+}
+blockquote{
+	font-family: serif;
+}
+@font-face{
+	font-family: ryses;
+	src: url("arial.otf");
+}
+.b{
+	font-family: ryses !important;
+	font-variant: small-caps;
+}
+.feed input,{
+	width:25%;
+}
+.feed{
+	overflow: auto;
+}
+.feed:after{
+	content: "";
+	clear: both;
+	display: table;
+}
+.ul{
+	width: 40%;
+    margin-right: 3%;
+    height: 100px;
+    float: right;
+	overflow-x: hidden;
+	scroll-behavior: auto;
+}
+@media only screen and (max-width: 900px){
+	.main p,.main legend,.feed p,.centerlayout li,.feed li{
+		font-size: 30px;
+	}
+	.navi{
+		font-size: 35px;
+	}
+	.ul{
+		 width: 40%;
+		 margin-right: 3%;
+		 height: 20%;
+	}
+}
+@media only screen and (max-width: 720px){
+	.main p,.main legend,.feed p,.centerlayout li,.feed lii{
+		font-size: 25px;
+	}
+	.navi{
+		font-size: 30px;
+	}
+	.ul{
+		 width: 40%;
+		 margin-right: 3%;
+		 height: 20%;
+	}
+}
+@media only screen and (max-width: 540px){
+	.main p,.main legend,.feed p,.centerlayout li,.feed li{
+		font-size: 15px;
+	}
+	.navi{
+		font-size: 20px;
+	}
+	.ul{
+		 width: 40%;
+		 margin-right: 3%;
+		 height: 20%;
+	}
+}
+@media only screen and (max-width: 360px){
+	.main p,.main legend,.feed p,.centerlayout li,.feed li{
+		font-size: 10px;
+	}
+	.navi{
+		font-size: 12px;
+	}
+	.ul{
+		 width: 30%;
+		 margin-right: 5%;
+		 height: 20%;
+	}
+}
