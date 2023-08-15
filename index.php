@@ -7,13 +7,14 @@
 		<title>Maligayang pagbabalik sa Sulat Baybayin</title>
 		<meta name="description" content="Nilikha upang mas mapalawig pa ang paggamit ng manuskritong baybayin, hindi lamang sa buong Pilipinas, maging sa iba't ibang panig ng mindo.">
 		<meta name="og:description" content="Nilikha upang mas mapalawig pa ang paggamit ng manuskritong baybayin, hindi lamang sa buong Pilipinas, maging sa iba't ibang panig ng mindo.">
+		<link rel="shortcut icon" href="icon.png" type="image/x-icon">
 		<link rel="stylesheet" href="mpop/styles.css">
 	</head>
 	<body>
 		<header>
 			<div class="title-side">
 				<h3 id="title">ᜐᜓᜎᜆ᜔ ᜊᜌ᜔ᜊᜌᜒᜈ᜔</h3>
-				<h5 id="subtitle">Sulat Baybayin <span id="time"></span></h5>
+				<h5 id="subtitle">Sulat Baybayin <span id="time" mpop-time-format="12"></span></h5>
 			</div>
 			<nav>
 				<ul>

@@ -74,7 +74,21 @@
 
 setInterval(() => {
 	const date = new Date()
-	document.getElementById("time").textContent = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+	if(document.getElementById("time").getAttribute("mpop-time-format") == 12){
+		let hours = date.getHours()
+		let am = "am"
+		if(hours >= 12){
+			am = "pm"
+			hours -= 12
+		}else{
+			if(hours == 0){
+				hours = 12
+			}
+		}
+		document.getElementById("time").textContent = `${hours}:${date.getMinutes()}:${date.getSeconds()} ${am}`
+	}else{
+		document.getElementById("time").textContent = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+	}
 })
 
 // for(let i = 0; i < document.getElementsByClassName("mpop-search").length; i++){
