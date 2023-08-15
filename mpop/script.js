@@ -91,6 +91,17 @@ setInterval(() => {
 	}
 })
 
+const inputs = document.getElementsByClassName("input")
+for(let i in inputs){
+	const input = inputs[i]
+	for(let c in input.childNodes){
+		const child = input.childNodes[c]
+		if(parseInt(child.getAttribute("mpop-length")) <= child.value.length){
+			console.log("test")
+		}
+	}
+}
+
 // for(let i = 0; i < document.getElementsByClassName("mpop-search").length; i++){
 // let x = document.getElementsByClassName("mpop-search")[i];
 // x.value = "🔎";

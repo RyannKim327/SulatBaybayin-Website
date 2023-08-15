@@ -84,6 +84,7 @@
 	--color-main: #ffffff;
 
 	--silver-gray: #d8d8d8;
+	--silver-metal: #808080;
 }
 
 *{
@@ -148,4 +149,34 @@ header > nav > ul > li:hover{
 	background-color: transparent;
 	color: var(--color-main);
 	box-shadow: 0 0 5px var(--silver-gray);
+}
+
+fieldset {
+	margin: .5em;
+	padding: .5em;
+	border-radius: .5em;
+}
+
+fieldset > legend {
+	border: 1px var(--silver-gray) solid;
+	border-radius: .5em;
+	padding: 0 .5em;
+	margin-left: 1em;
+}
+
+fieldset > blockquote{
+	text-align: justify;
+	border-left: .5em var(--silver-gray) solid;
+	padding: 0 .75em;
+	margin: .25em 0;
+}
+fieldset > blockquote:hover{
+	border-left: .5em var(--silver-metal) solid;
+}
+a{
+	color: var(--silver-gray);
+}
+
+.mpop-login{
+	margin: .5em;
 }

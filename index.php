@@ -1,3 +1,8 @@
+<?php
+	function isLoggedIn(){
+		return isset($_COOKIE['mpop-username']);
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -26,6 +31,22 @@
 				</ul>
 			</nav>
 		</header>
+		<?php if(!isLoggedIn()){ ?>
+		<form action="" class="mpop-credentials">
+			<span class="input">
+				<input type="text" name="username" id="username" mpop-length="5" placeholder="Username">
+			</span>
+			<span class="input">
+				<input type="password" name="pass" id="password" mpop-length="8" placeholder="Password">
+				<input type="submit" value="" id="accept">
+			</span>
+		</form>
+		<?php } ?>
+		<main>
+			<div class="include" id="index">
+				<?php include("home.html") ?>
+			</div>
+		</main>
 	</body>
 	<script src="mpop/script.js"></script>
 </html>	
