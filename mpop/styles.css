@@ -71,187 +71,81 @@
 * to the following, and consideration to the author itself.
 *
 */
-*{
-font-variant: small-caps;
-background-color: transparent;
-margin: 0;
-padding: 0;
-border: 0;
-outline: 0;
-}
-body{
-background-color: #131313;
-color: #ffffff;
-}
-p{
-text-align: justify;
-}
-ol{
-list-style: lower-roman;
-}
 @font-face{
-font-family: baybayin;
-src: url(baybay.ttf);
-}
-.mpop-userselect-none{
-user-select: none;
-}
-.mpop-base{
-border: 1px #999999 solid;
-border-radius: 10px;
-margin: 5px;
-}
-.mpop-head, .mpop-foot{
-border-radius: 10px;
-background-image: linear-gradient(to bottom, #131313 50%, #aaaaaa);
-padding: 10px;
-}
-.mpop-body{
-padding: 10px;
-}
-.serif{
-font-family: "Times New Roman", serif;
-}
-.monospace{
-font-family: "Courier New", monospace;
-}
-.pl-15{
-padding-left: 15px;
-}
-.p-20{
-padding: 20px;
-}
-.mpop-login{
-display: flex;
-flex-wrap: wrap;
-}
-.mpop-input{
-background-color: #555555;
-border-radius: 10px;
-padding-left: 5px;
-padding-right: 5px;
-margin-top: 8px;
-margin-bottom 8px;
-align-content: center;
-margin-left: 1px;
-margin-right: 1px;
-}
-.mpop-input input{
-color: #ffffff;
-font-family: "Times New Roman", serif;
-padding-left: 5px;
-padding-right: 5px;
-overflow: none;
-border: 0;
-outline: 0;
-}
-.mpop-input input::placeholder{
-color: #dedede;
-font-family: "Times New Roman", serif;
-}
-.mpop-input input[type="button"],
-.mpop-input input[type="submit"],
-.mpop-input button,{
-background-color: #ffffff;
-color: transparent;
--webkit-background-clip: text;
-}
-.mpop-input mpop{
-display: none;
-}
-.mpop-input mpop:before{
-content: "| ";
-color: #ffffff;
-}
-.mpop-login .mpop-input{
-display: flex;
-width: 45%;
-}
-.mpop-login .mpop-input input{
-width: 100%;
-}
-.mpop-login mpop{
-width: 25%;
-}
-.mpop-login .mpop-input input[type="button"],
-.mpop-login .mpop-input input[type="submit"],
-.mpop-login .mpop-input button{
-width: 75%;
-}
-.mpop-tabs{
-margin-top: 5px;
-margin-bottom: 5px;
-}
-.mpop-tabs, .mpop-tabs li{
-display: flex;
-flex-wrap: wrap;
-margin-left: 3px;
-margin-right: 3px;
-user-select: none;
-}
-.mpop-tabs li{
-list-style: none;
-background-color: #555555;
-color: #ffffff;
-border-radius: 10px;
-text-align: center;
-padding-left: 8px;
-padding-right: 8px;
-margin-top: 5px;
-}
-.mpop-tabs li:hover,
-.mpop-tabs li:focus{
-background-color: #aaaaaa;
-color: #000000;
-}
-.mpop-field, .mpop-field legend{
-border: 1px #959595 solid;
-border-radius: 10px;
-padding-left: 10px;
-padding-right: 10px;
-}
-.mpop-field{
-margin-top: 8px;
-margin-bottom 8px;
-}
-.mpop-field legend{
-margin-left: 15px;
-background-color: #131313;
-}
-.mpop-list, ol{
-margin-left: 25px;
-}
-.mpop-table-left th, .mpop-table-left td{
-text-align: left;
-}
-.mpop-list label:before, .mpop-list label:after{
-content: " • ";
-} 
-.mpop-flex{
-display: flex;
-flex-wrap: wrap;
-}
-.mpop-kb{
-margin: 3px;
-padding-left: 5px;
-padding-right: 5px;
-text-align: right;
-}
-.mpop-kb legend{
-margin: 0;
-font-family: "Times New Roman", serif;
-font-size: 1.5vw;
-}
-.mpop-button{
-background-color: #555555;
-color: #ffffff;
-border-radius: 10px;
-width: 95%;
-text-align: center;
-align-self: center;
-margin-left: 10px;
-margin-right: 10px;
+	font-family: "baybayin";
+	src: url("baybay.ttf");;
 }
 .baybay{
-font-family: baybayin !important;
+	font-family: baybayin !important;
+}
+
+:root{
+	--background-main: #131320;
+	--color-main: #ffffff;
+
+	--silver-gray: #d8d8d8;
+}
+
+*{
+	padding:0;
+	margin: 0;
+	user-select: none;
+	box-sizing: border-box;
+	outline: none;
+}
+
+body{
+	background-color: var(--background-main);
+	color: var(--color-main);
+}
+
+header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--background-main);
+	background-image: linear-gradient(to bottom, var(--background-main), var(--silver-gray) 200%);
+	padding:.25em;
+	margin: .5em;
+	border-radius: .25em;
+}
+
+header > .title-side {
+	display: flex;
+	flex-direction: column;
+	font-family: "baybayin";
+	font-weight: lighter;
+}
+header > .title-side > #subtitle{
+	margin-left: 1em;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+header > nav > ul{
+	display: flex;
+	flex-direction: row;
+	margin: 0 1em ;
+}
+
+header > nav > ul > li{
+	list-style: none;
+	background-color: var(--silver-gray);
+	color: var(--background-main);
+	padding: .25em .5em;
+	border-radius: 5em;
+	font-size: smaller;
+	font-weight: bolder;
+	cursor: pointer;
+	font-family: "baybayin";
+}
+
+header > nav > ul > li:nth-child(even){
+	margin: 0 .5em;
+}
+
+header > nav > ul > li:hover{
+	background-color: transparent;
+	color: var(--color-main);
+	box-shadow: 0 0 5px var(--silver-gray);
 }
