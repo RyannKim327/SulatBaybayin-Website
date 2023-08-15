@@ -13,7 +13,7 @@
 		<header>
 			<div class="title-side">
 				<h3 id="title">ᜐᜓᜎᜆ᜔ ᜊᜌ᜔ᜊᜌᜒᜈ᜔</h3>
-				<h5 id="subtitle">Sulat Baybayin</h5>
+				<h5 id="subtitle">Sulat Baybayin <span id="time"></span></h5>
 			</div>
 			<nav>
 				<ul>
@@ -26,4 +26,5 @@
 			</nav>
 		</header>
 	</body>
-</html>
+	<script src="mpop/script.js"></script>
+</html>	

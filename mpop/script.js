@@ -71,58 +71,64 @@
 * to the following, and consideration to the author itself.
 *
 */
-for(let i = 0; i < document.getElementsByClassName("mpop-search").length; i++){
-let x = document.getElementsByClassName("mpop-search")[i];
-x.value = "🔎";
-}
-for(let i = 0; i < document.getElementsByTagName("input").length; i++){
-let p = document.getElementsByTagName("input")[i];
-p.addEventListener("keyup", function(){
-event.preventDefault();
-if(p.getAttribute("mpop-name") == "single"){
-hasText(p.getAttribute("mpop-parent"));
-}else if(p.getAttribute("mpop-name") == "login"){
-hasTextLogin(p.getAttribute("mpop-id1"), p.getAttribute("mpop-id2"));
-}
-});
-}
-function go(link){
-location.href = link;
-}
-function hasText(a){
-let parent = document.getElementById(a);
-let nxt_inp = parent.children[0];
-let nxt_mpop = parent.children[1];
-if(nxt_inp.value == ""){
-nxt_mpop.style.display = "none";
-}else{
-nxt_mpop.style.display = "inline";
-}
-}
-function hasTextLogin(a, b){
-let parent = document.getElementById(b);
-let nxt_inp = parent.children[0];
-let nxt_mpop = parent.children[1];
-let nxt_pass = document.getElementById(a).children[0];
-if((nxt_inp.value.length < l(nxt_inp, "mpop-length")) || (nxt_pass.value.length < l(nxt_pass, "mpop-length"))){
-nxt_mpop.style.display = "none";
-}else{
-nxt_mpop.style.display = "inline";
-}
-console.log("a " + l(nxt_inp, "mpop-length") + " b " + l(nxt_pass, "mpop-length"));
-}
-function l(a, b){
-try{
-return parseInt(a.getAttribute(b));
-}catch(err){
-console.log(a + err.message);
-return 0;
-}
-}
-function show(a){
-let tab_content = document.getElementsByClassName("mpop-tabs-content");
-for(let i = 0; i < tab_content.length; i++){
-tab_content[i].style.display = "none";
-} 
-document.getElementById(a).style.display = "block";
-}
+
+setInterval(() => {
+	const date = new Date()
+	document.getElementById("time").textContent = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+})
+
+// for(let i = 0; i < document.getElementsByClassName("mpop-search").length; i++){
+// let x = document.getElementsByClassName("mpop-search")[i];
+// x.value = "🔎";
+// }
+// for(let i = 0; i < document.getElementsByTagName("input").length; i++){
+// let p = document.getElementsByTagName("input")[i];
+// p.addEventListener("keyup", function(){
+// event.preventDefault();
+// if(p.getAttribute("mpop-name") == "single"){
+// hasText(p.getAttribute("mpop-parent"));
+// }else if(p.getAttribute("mpop-name") == "login"){
+// hasTextLogin(p.getAttribute("mpop-id1"), p.getAttribute("mpop-id2"));
+// }
+// });
+// }
+// function go(link){
+// location.href = link;
+// }
+// function hasText(a){
+// let parent = document.getElementById(a);
+// let nxt_inp = parent.children[0];
+// let nxt_mpop = parent.children[1];
+// if(nxt_inp.value == ""){
+// nxt_mpop.style.display = "none";
+// }else{
+// nxt_mpop.style.display = "inline";
+// }
+// }
+// function hasTextLogin(a, b){
+// let parent = document.getElementById(b);
+// let nxt_inp = parent.children[0];
+// let nxt_mpop = parent.children[1];
+// let nxt_pass = document.getElementById(a).children[0];
+// if((nxt_inp.value.length < l(nxt_inp, "mpop-length")) || (nxt_pass.value.length < l(nxt_pass, "mpop-length"))){
+// nxt_mpop.style.display = "none";
+// }else{
+// nxt_mpop.style.display = "inline";
+// }
+// console.log("a " + l(nxt_inp, "mpop-length") + " b " + l(nxt_pass, "mpop-length"));
+// }
+// function l(a, b){
+// try{
+// return parseInt(a.getAttribute(b));
+// }catch(err){
+// console.log(a + err.message);
+// return 0;
+// }
+// }
+// function show(a){
+// let tab_content = document.getElementsByClassName("mpop-tabs-content");
+// for(let i = 0; i < tab_content.length; i++){
+// tab_content[i].style.display = "none";
+// } 
+// document.getElementById(a).style.display = "block";
+// }
