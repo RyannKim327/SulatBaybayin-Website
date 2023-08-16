@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
+
 /*
 *
 * Developer: Ryann Kim Sesgundo
@@ -43,6 +45,7 @@
 * Jonel Tapia
 * Criztian Jade Tuplano
 * Lloyd Samuel Garcia
+* John Kenneth De Imus POgi
 *
 * Geeks for Geeks
 * Tutorials Point
@@ -80,11 +83,11 @@
 }
 
 :root{
-	--background-main: #131320;
+	--background-main: #8e6865;
 	--color-main: #ffffff;
 
-	--silver-gray: #d8d8d8;
-	--silver-metal: #808080;
+	--silver-gray: #b89c93;
+	--silver-metal: #1f140d;
 }
 
 *{
@@ -132,7 +135,7 @@ header > nav > ul{
 header > nav > ul > li{
 	list-style: none;
 	background-color: var(--silver-gray);
-	color: var(--background-main);
+	color: var(--silver-metal);
 	padding: .25em .5em;
 	border-radius: 5em;
 	font-size: smaller;
@@ -179,4 +182,40 @@ a{
 
 .mpop-login{
 	margin: .5em;
+}
+
+.mpop-credentials{
+	display: flex;
+	flex-direction: row;
+	margin: 0 .5em;
+}
+
+.mpop-credentials > .input{
+	display: flex;
+	flex-direction: row;
+	background-color: var(--silver-metal);
+	color: var(--color-main);
+	border-radius: 5em;
+	padding: 0 .5em;
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.mpop-credentials > .input > input{
+	background-color: transparent;
+	color: var(--color-main);
+	border: 0;
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.mpop-credentials > .input > input[type='submit'],
+.mpop-credentials > .input > input[type='button']{
+	content: ">";
+	width: 10px;
+	padding: 0 .15em;
 }

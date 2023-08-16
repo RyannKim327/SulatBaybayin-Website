@@ -38,7 +38,7 @@
 			</span>
 			<span class="input">
 				<input type="password" name="pass" id="password" mpop-length="8" placeholder="Password">
-				<input type="submit" value="" id="accept">
+				<input type="submit" value="√" id="accept">
 			</span>
 		</form>
 		<?php } ?>

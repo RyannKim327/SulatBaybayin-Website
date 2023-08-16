@@ -43,6 +43,7 @@
 * Jonel Tapia
 * Criztian Jade Tuplano
 * Lloyd Samuel Garcia
+* John Kenneth De Imus POgi
 *
 * Geeks for Geeks
 * Tutorials Point
