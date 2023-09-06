@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sulat Baybayin: Chatbox Section - <?php echo (isset($_COOKIE['user'])) ? base64_decode($_COOKIE['user']) : "Login Panel";?></title>
+	<title>Sulat Baybayin: Chatbox Section - <?php echo (isset($_COOKIE['user'])) ? str_replace("<", "&lt;", base64_decode($_COOKIE['user']) ): "Login Panel";?></title>
 	<meta name="description" content="Sulat Baybayin X: Chatbox page, talk with strangers">
 	<?php require 'b/a.php'; ?>
 	<style type="text/css">
@@ -104,7 +104,7 @@
 				<td onclick="c();" class="b"><center>clear<label class="buts"><br>bura</label></center></td>
 			</tr>
 		</table>
-	<?php }else{ echo "<p class='b'>Welcome: " . base64_decode($_COOKIE['user']) . " <a href='chatbox'>Refresh</a></p>";?>
+	<?php }else{ echo "<p class='b'>Welcome: " . str_replace("<", "&lt;", base64_decode($_COOKIE['user']) ). " <a href='chatbox'>Refresh</a></p>";?>
 	<p>Don't post any kind of pornographic content and illegal activities, this is just a open section for those who want to talk using baybayin characters.</p>
 	<form action="a/f.php" method="POST">
 		<input onchange="d();" oninput="d();" class="b" id="field" type="text" name="message" required autofocus>	
@@ -158,9 +158,9 @@
 					$d1 = $q3['b'];
 					$q4 = mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM d WHERE a = '$d1'"));
 					if($q3['b'] != 0){
-						echo "<li style='list-style:none;' class='b'>" . base64_decode($q4['b']) . ": " . base64_decode($q3['c']) . "</li>";
+						echo "<li style='list-style:none;' class='b'>" . str_replace("<", "&lt;", base64_decode($q4['b'])) . ": " str_replace.("<", "&lt;",  base64_decode($q3['c']) ). "</li>";
 					}else{
-						echo "<li style='list-style:none;' class='b'>Unknown User: " . base64_decode($q3['c']) . "</li>";
+						echo "<li style='list-style:none;' class='b'>Unknown User: " str_replace.("<", "&lt;",  base64_decode($q3['c']) ). "</li>";
 					}
 				}
 			}
