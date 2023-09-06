@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		canvas{
+			border: 1px lightblue solid;
+		}
+	</style>
+</head>
+<body>
+</body>
+<script>
+	let snake
+	let bait
+	let move = "right" // to identify the movements
+	let block = 10 // This is to modify the size the other changed is in the line 22
+	let movementPixel = 3 // movement modifier
+	let speed = 25
+	function start(){
+		// This is where do we start
+		snake = new _snake(block, block, "rgba(0, 0, 0, 0.5)", 10, 120)
+		bait = new _bait(block, block, "rgba(200, 0, 0, 0.5)")
+		myGameArea.start()
+	}
+
+	let myGameArea = {
+		canvas:  document.createElement("canvas"),
+		start: function(){
+			this.canvas.width = 480
+			this.canvas.height = 270
+			this.context = this.canvas.getContext("2d")
+			document.body.insertBefore(this.canvas, document.body.childNodes[0])
+			this.interval = setInterval(updateGameArea, speed)
+		},
+		clear: function(){
+			this.context.clearRect(0, 0, this.canvas.width, this.canvas.height)
+		}
+	}
+
+	function _snake(width, height, color, x, y){
+		this.width = width
+		this.height = height
+		this.x = x
+		this.y = y
+		this.update = function(){
+			ctx = myGameArea.context
+			ctx.fillStyle = color
+			ctx.fillRect(this.x, this.y, this. width, this. height)
+		}
+	}
+
+	function _bait(width, height, color){
+		this.width = width
+		this.height = height
+		this.x = Math.floor(Math.random() * myGameArea.canvas.width)
+		this.y = Math.floor(Math.random() * myGameArea.canvas.height)
+		this.update = function(){
+			ctx = myGameArea.context
+			ctx.fillStyle = color
+			ctx.fillRect(this.x, this.y, this.width, this.height)
+		}
+	}
+
+	function updateGameArea(){
+		myGameArea.clear()
+		// Dito we will modify the movements kumbaga
+		// I use movementPixel to easily modify the movements of the boxes per pixel
+		if((snake.x >= myGameArea.canvas.width - block || snake.x <= 0) || (snake.y >= myGameArea.canvas.height - block || snake.y <= 0)){
+			move = "right"
+			snake.x = 10
+			snake.y = 120
+		}else{
+			switch(move){
+				case "right":
+					snake.x += movementPixel
+					snake.y += 0
+				break
+				case "left":
+					snake.x -= movementPixel
+					snake.y += 0
+				break
+				case "up":
+					snake.x += 0
+					snake.y -= movementPixel
+				break
+				case "down":
+					snake.x += 0
+					snake.y += movementPixel
+				break
+			}
+		}
+		snake.update()
+		bait.update()
+	}
+
+	document.onkeyup = (event) => {
+		let codes = {
+			"37": "left",
+			"38": "up",
+			"39": "right",
+			"40": "down",
+			"87": "up",
+			"68": "right",
+			"83": "down",
+			"65": "left"
+		}
+		let m = codes[event.keyCode]
+		if((move == "left" && m != "right") || (move == "right" && m != "left") || (move == "down" && m != "up") || (move == "up" && m != "down")){
+			move = m
+		}
+		updateGameArea()
+	}
+
+	// Call the start here, or thru onload attirbute in html
+	start()
+
+</script>
+</html>
