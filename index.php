@@ -25,7 +25,7 @@
 				<ul>
 					<li id="index" title="Home">
 						<fieldset>
-							
+							<legend>Home</legend>
 							ᜆᜑᜈᜈ᜔
 						</fieldset>
 					</li>
