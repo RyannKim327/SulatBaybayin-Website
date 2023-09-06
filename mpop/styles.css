@@ -134,10 +134,6 @@ header > nav > ul{
 
 header > nav > ul > li{
 	list-style: none;
-}
-
-header > nav > ul > li > fieldset{
-	list-style: none;
 	background-color: var(--silver-gray);
 	color: var(--silver-metal);
 	padding: .25em .5em;
@@ -148,11 +144,11 @@ header > nav > ul > li > fieldset{
 	font-family: "baybayin";
 }
 
-header > nav > ul > li > fieldset:nth-child(even){
+header > nav > ul > li:nth-child(even){
 	margin: 0 .5em;
 }
 
-header > nav > ul > li > fieldset:hover{
+header > nav > ul > li:hover{
 	background-color: transparent;
 	color: var(--color-main);
 	box-shadow: 0 0 5px var(--silver-gray);
