@@ -132,8 +132,9 @@ header > nav > ul{
 	margin: 0 1em ;
 }
 
-header > nav > ul > li{
-	list-style: none;
+header > nav > ul > li > blockquote{
+header > nav > ul > li > blockquote{
+list-style: none;
 	background-color: var(--silver-gray);
 	color: var(--silver-metal);
 	padding: .25em .5em;
@@ -144,11 +145,11 @@ header > nav > ul > li{
 	font-family: "baybayin";
 }
 
-header > nav > ul > li:nth-child(even){
+header > nav > ul > li > blockquote:nth-child(even){
 	margin: 0 .5em;
 }
 
-header > nav > ul > li:hover{
+header > nav > ul > li > blockquote:hover{
 	background-color: transparent;
 	color: var(--color-main);
 	box-shadow: 0 0 5px var(--silver-gray);
