@@ -23,7 +23,12 @@
 			</div>
 			<nav>
 				<ul>
-					<li id="index" title="Home">ᜆᜑᜈᜈ᜔</li>
+					<li id="index" title="Home">
+						<fieldset>
+							
+							ᜆᜑᜈᜈ᜔
+						</fieldset>
+					</li>
 					<li id="chatbox" title="Chatbox">ᜆᜎᜃᜌᜈ᜔</li>
 					<li id="download" title="Download">Download</li>
 					<li id="faqs" title="Frequently Asked Questions">ᜃᜇᜈᜒᜏᜅ᜔ ᜆᜈᜓᜅ᜔᜔</li>
